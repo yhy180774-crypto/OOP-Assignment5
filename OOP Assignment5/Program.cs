@@ -99,7 +99,29 @@
 
 
 
+            #region Question04
 
+            /// 04) Extension Methods
+            ///
+            /// a) What is an Extension Method?
+            ///
+            /// An Extension Method allows us to add a new method to an existing type
+            /// without modifying its original class.
+            ///
+            /// b) What keyword must be used in the first parameter of an extension method?
+            ///
+            /// The keyword "this" must be used before the first parameter.
+            ///
+            /// c) Where must an extension method be declared?
+            ///
+            /// An Extension Method must be declared inside a static class.
+            ///
+            /// d) Can an extension method access private members of the class it extends?
+            ///
+            /// No. An Extension Method cannot directly access private members
+            /// of the class it extends.
+
+            #endregion
 
 
 
