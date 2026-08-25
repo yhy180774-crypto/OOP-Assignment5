@@ -440,20 +440,116 @@
 
             #region ExpressShipment
 
-        //public class ExpressShipment :
+            //public class ExpressShipment :
+            //    Shipment,
+            //    ITrackable,
+            //    IInsurable
+            //        {
+            //            public decimal ExtraFee { get; set; }
+
+            //            public ExpressShipment(
+            //                string trackingCode,
+            //                string description,
+            //                decimal weight,
+            //                decimal deliveryFee,
+            //                DeliveryAddress destination,
+            //                decimal extraFee)
+            //                : base(
+            //                    trackingCode,
+            //                    description,
+            //                    weight,
+            //                    deliveryFee,
+            //                    destination)
+            //            {
+            //                ExtraFee = extraFee;
+            //            }
+
+            //            public override decimal EstimatedCost
+            //            {
+            //                get
+            //                {
+            //                    return DeliveryFee +
+            //                           (Weight * 5) +
+            //                           ExtraFee;
+            //                }
+            //            }
+
+            //            public override void PrintShipment()
+            //            {
+            //                Console.WriteLine(
+            //                    "Express Shipment");
+
+            //                Console.WriteLine();
+
+            //                Console.WriteLine(
+            //                    "Tracking Code : "
+            //                    + TrackingCode);
+
+            //                Console.WriteLine(
+            //                    "Description   : "
+            //                    + Description);
+
+            //                Console.WriteLine(
+            //                    "Weight        : "
+            //                    + Weight + " KG");
+
+            //                Console.WriteLine(
+            //                    "Delivery Fee  : "
+            //                    + DeliveryFee + " EGP");
+
+            //                Console.WriteLine(
+            //                    "Extra Fee     : "
+            //                    + ExtraFee + " EGP");
+
+            //                Console.WriteLine(
+            //                    "Estimated Cost: "
+            //                    + EstimatedCost + " EGP");
+            //            }
+
+            //            string ITrackable.GetTrackingStatus()
+            //            {
+            //                return "Shipment "
+            //                    + TrackingCode
+            //                    + " is Out For Delivery";
+            //            }
+
+            //            public decimal CalculateInsurance()
+            //            {
+            //                return EstimatedCost * 0.08m;
+            //            }
+            //        }
+
+            #endregion
+
+
+
+            #region InternationalShipment
+
+        //public class InternationalShipment :
         //    Shipment,
         //    ITrackable,
         //    IInsurable
         //        {
-        //            public decimal ExtraFee { get; set; }
+        //            public string DestinationCountry
+        //            {
+        //                get;
+        //                set;
+        //            }
 
-        //            public ExpressShipment(
+        //            public decimal CustomsFee
+        //            {
+        //                get;
+        //                set;
+        //            }
+
+        //            public InternationalShipment(
         //                string trackingCode,
         //                string description,
         //                decimal weight,
         //                decimal deliveryFee,
         //                DeliveryAddress destination,
-        //                decimal extraFee)
+        //                string destinationCountry,
+        //                decimal customsFee)
         //                : base(
         //                    trackingCode,
         //                    description,
@@ -461,7 +557,10 @@
         //                    deliveryFee,
         //                    destination)
         //            {
-        //                ExtraFee = extraFee;
+        //                DestinationCountry =
+        //                    destinationCountry;
+
+        //                CustomsFee = customsFee;
         //            }
 
         //            public override decimal EstimatedCost
@@ -470,39 +569,43 @@
         //                {
         //                    return DeliveryFee +
         //                           (Weight * 5) +
-        //                           ExtraFee;
+        //                           CustomsFee;
         //                }
         //            }
 
         //            public override void PrintShipment()
         //            {
         //                Console.WriteLine(
-        //                    "Express Shipment");
+        //                    "International Shipment");
 
         //                Console.WriteLine();
 
         //                Console.WriteLine(
-        //                    "Tracking Code : "
+        //                    "Tracking Code       : "
         //                    + TrackingCode);
 
         //                Console.WriteLine(
-        //                    "Description   : "
+        //                    "Description         : "
         //                    + Description);
 
         //                Console.WriteLine(
-        //                    "Weight        : "
+        //                    "Weight              : "
         //                    + Weight + " KG");
 
         //                Console.WriteLine(
-        //                    "Delivery Fee  : "
+        //                    "Delivery Fee        : "
         //                    + DeliveryFee + " EGP");
 
         //                Console.WriteLine(
-        //                    "Extra Fee     : "
-        //                    + ExtraFee + " EGP");
+        //                    "Destination Country : "
+        //                    + DestinationCountry);
 
         //                Console.WriteLine(
-        //                    "Estimated Cost: "
+        //                    "Customs Fee         : "
+        //                    + CustomsFee + " EGP");
+
+        //                Console.WriteLine(
+        //                    "Estimated Cost      : "
         //                    + EstimatedCost + " EGP");
         //            }
 
@@ -510,20 +613,16 @@
         //            {
         //                return "Shipment "
         //                    + TrackingCode
-        //                    + " is Out For Delivery";
+        //                    + " has been Delivered.";
         //            }
 
         //            public decimal CalculateInsurance()
         //            {
-        //                return EstimatedCost * 0.08m;
+        //                return EstimatedCost * 0.12m;
         //            }
         //        }
 
             #endregion
-
-
-
-
 
 
 
