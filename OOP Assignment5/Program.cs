@@ -156,6 +156,168 @@
 
 
 
+            #region Shipment
+
+                //public abstract partial class Shipment
+                //        {
+                //            private string trackingCode;
+                //            private string description;
+                //            private decimal weight;
+                //            private decimal deliveryFee;
+
+                //            public static int TotalShipmentsCreated;
+
+                //            public string TrackingCode
+                //            {
+                //                get
+                //                {
+                //                    return trackingCode;
+                //                }
+                //            }
+
+                //            public string Description
+                //            {
+                //                get
+                //                {
+                //                    return description;
+                //                }
+
+                //                set
+                //                {
+                //                    if (!string.IsNullOrWhiteSpace(value))
+                //                        description = value;
+                //                }
+                //            }
+
+                //            public decimal Weight
+                //            {
+                //                get
+                //                {
+                //                    return weight;
+                //                }
+
+                //                set
+                //                {
+                //                    if (value > 0)
+                //                        weight = value;
+                //                }
+                //            }
+
+                //            public decimal DeliveryFee
+                //            {
+                //                get
+                //                {
+                //                    return deliveryFee;
+                //                }
+
+                //                private set
+                //                {
+                //                    if (value > 0)
+                //                        deliveryFee = value;
+                //                }
+                //            }
+
+                //            public DeliveryAddress Destination
+                //            {
+                //                get;
+                //                set;
+                //            }
+
+                //            public abstract decimal EstimatedCost
+                //            {
+                //                get;
+                //            }
+
+                //            static Shipment()
+                //            {
+                //                TotalShipmentsCreated = 0;
+
+                //                Console.WriteLine(
+                //                    "Shipment System Initialized");
+                //            }
+
+                //            protected Shipment(
+                //                string trackingCode,
+                //                string description,
+                //                decimal weight,
+                //                decimal deliveryFee,
+                //                DeliveryAddress destination)
+                //            {
+                //                this.trackingCode =
+                //                    string.IsNullOrWhiteSpace(trackingCode)
+                //                    ? "Unknown"
+                //                    : trackingCode;
+
+                //                this.description = "Unknown";
+                //                this.weight = 1;
+                //                this.deliveryFee = 50;
+
+                //                Description = description;
+                //                Weight = weight;
+                //                DeliveryFee = deliveryFee;
+
+                //                Destination = destination;
+
+                //                TotalShipmentsCreated++;
+                //            }
+
+                //            public abstract void PrintShipment();
+
+                //            public static int GetTotalShipmentsCreated()
+                //            {
+                //                return TotalShipmentsCreated;
+                //            }
+
+                //            public Shipment CopyShipment()
+                //            {
+                //                return (Shipment)this.MemberwiseClone();
+                //            }
+
+                //            public Shipment ShallowCopy()
+                //            {
+                //                return (Shipment)this.MemberwiseClone();
+                //            }
+
+                //            public Shipment DeepCopy()
+                //            {
+                //                Shipment copy =
+                //                    (Shipment)this.MemberwiseClone();
+
+                //                if (Destination != null)
+                //                {
+                //                    copy.Destination =
+                //                        new DeliveryAddress(
+                //                            Destination.City,
+                //                            Destination.Street,
+                //                            Destination.BuildingNumber);
+                //                }
+
+                //                return copy;
+                //            }
+
+                //            public void UpdateWeight(decimal newWeight)
+                //            {
+                //                if (newWeight > 0)
+                //                    Weight = newWeight;
+                //            }
+
+                //            public void UpdateWeight(
+                //                decimal newWeight,
+                //                decimal extraPackingWeight)
+                //            {
+                //                if (newWeight > 0 &&
+                //                    extraPackingWeight >= 0)
+                //                {
+                //                    Weight =
+                //                        newWeight +
+                //                        extraPackingWeight;
+                //                }
+                //            }
+                //        }
+
+            #endregion
+
+
 
 
 
