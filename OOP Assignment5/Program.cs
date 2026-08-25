@@ -775,68 +775,376 @@
 
             #region ShipmentExtensions
 
-        //public static class ShipmentExtensions
-        //        {
-        //            public static string GetSummary(
-        //                this Shipment shipment)
-        //            {
-        //                string type =
-        //                    shipment.GetType().Name;
+            //public static class ShipmentExtensions
+            //        {
+            //            public static string GetSummary(
+            //                this Shipment shipment)
+            //            {
+            //                string type =
+            //                    shipment.GetType().Name;
 
-        //                type =
-        //                    type.Replace(
-        //                        "Shipment",
-        //                        "");
+            //                type =
+            //                    type.Replace(
+            //                        "Shipment",
+            //                        "");
 
-        //                return shipment.TrackingCode
-        //                       + " | "
-        //                       + type
-        //                       + " | "
-        //                       + shipment.Weight
-        //                       + " KG | "
-        //                       + GetStatus(shipment);
-        //            }
+            //                return shipment.TrackingCode
+            //                       + " | "
+            //                       + type
+            //                       + " | "
+            //                       + shipment.Weight
+            //                       + " KG | "
+            //                       + GetStatus(shipment);
+            //            }
 
-        //            public static bool IsDelivered(
-        //                this Shipment shipment)
-        //            {
-        //                return GetStatus(shipment)
-        //                    == "Delivered";
-        //            }
+            //            public static bool IsDelivered(
+            //                this Shipment shipment)
+            //            {
+            //                return GetStatus(shipment)
+            //                    == "Delivered";
+            //            }
 
-        //            private static string GetStatus(
-        //                Shipment shipment)
-        //            {
-        //                ITrackable trackable =
-        //                    shipment as ITrackable;
+            //            private static string GetStatus(
+            //                Shipment shipment)
+            //            {
+            //                ITrackable trackable =
+            //                    shipment as ITrackable;
 
-        //                if (trackable == null)
-        //                    return "Unknown";
+            //                if (trackable == null)
+            //                    return "Unknown";
 
-        //                string status =
-        //                    trackable.GetTrackingStatus();
+            //                string status =
+            //                    trackable.GetTrackingStatus();
 
-        //                if (status.Contains(
-        //                    "has been Delivered"))
-        //                {
-        //                    return "Delivered";
-        //                }
+            //                if (status.Contains(
+            //                    "has been Delivered"))
+            //                {
+            //                    return "Delivered";
+            //                }
 
-        //                if (status.Contains(
-        //                    "Out For Delivery"))
-        //                {
-        //                    return "Out For Delivery";
-        //                }
+            //                if (status.Contains(
+            //                    "Out For Delivery"))
+            //                {
+            //                    return "Out For Delivery";
+            //                }
 
-        //                return "In Transit";
-        //            }
-        //        }
+            //                return "In Transit";
+            //            }
+            //        }
 
             #endregion
 
 
 
+            #region Program
 
+        //class Program
+        //        {
+        //            static void Main()
+        //            {
+        //                DeliveryUtilities.PrintSystemTitle();
+
+        //                Console.WriteLine();
+
+        //                // ==========================================
+        //                // Create Addresses
+        //                // ==========================================
+
+        //                DeliveryAddress address1 =
+        //                    new DeliveryAddress(
+        //                        "Cairo",
+        //                        "Tahrir Street",
+        //                        15);
+
+        //                DeliveryAddress address2 =
+        //                    new DeliveryAddress(
+        //                        "Giza",
+        //                        "Dokki Street",
+        //                        20);
+
+        //                DeliveryAddress address3 =
+        //                    new DeliveryAddress(
+        //                        "Cairo",
+        //                        "Nasr City",
+        //                        30);
+
+        //                // ==========================================
+        //                // Creating Shipments
+        //                // ==========================================
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    "Creating Shipments...");
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                StandardShipment standard =
+        //                    new StandardShipment(
+        //                        "SH001",
+        //                        "Laptop",
+        //                        3,
+        //                        80,
+        //                        address1);
+
+        //                Console.WriteLine(
+        //                    "Standard Shipment Created");
+
+        //                ExpressShipment express =
+        //                    new ExpressShipment(
+        //                        "SH002",
+        //                        "Mobile Phone",
+        //                        2,
+        //                        60,
+        //                        address2,
+        //                        30);
+
+        //                Console.WriteLine(
+        //                    "Express Shipment Created");
+
+        //                InternationalShipment international =
+        //                    new InternationalShipment(
+        //                        "SH003",
+        //                        "Television",
+        //                        8,
+        //                        120,
+        //                        address3,
+        //                        "Germany",
+        //                        100);
+
+        //                Console.WriteLine(
+        //                    "International Shipment Created");
+
+        //                Console.WriteLine();
+
+        //                Console.WriteLine(
+        //                    "Total Shipments Created : "
+        //                    + Shipment.GetTotalShipmentsCreated());
+
+        //                Console.WriteLine();
+
+        //                // ==========================================
+        //                // Object Copying
+        //                // ==========================================
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    "Object Copying");
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Shipment shipment1 = standard;
+
+        //                Shipment shipment2 = shipment1;
+
+        //                Console.WriteLine(
+        //                    "Original Shipment : "
+        //                    + shipment1.TrackingCode);
+
+        //                Console.WriteLine(
+        //                    "Assigned Shipment : "
+        //                    + shipment2.TrackingCode);
+
+        //                Console.WriteLine(
+        //                    "Same Object : "
+        //                    + Object.ReferenceEquals(
+        //                        shipment1,
+        //                        shipment2));
+
+        //                Console.WriteLine();
+
+        //                // ==========================================
+        //                // Shallow Copy
+        //                // ==========================================
+
+        //                Console.WriteLine(
+        //                    "------------------------------------------");
+
+        //                Console.WriteLine(
+        //                    "Shallow Copy");
+
+        //                Console.WriteLine(
+        //                    "------------------------------------------");
+
+        //                Shipment shallow =
+        //                    shipment1.ShallowCopy();
+
+        //                Console.WriteLine(
+        //                    "Original Shipment Address : "
+        //                    + shipment1.Destination.City);
+
+        //                Console.WriteLine(
+        //                    "Copied Shipment Address : "
+        //                    + shallow.Destination.City);
+
+        //                Console.WriteLine(
+        //                    "Changing copied shipment address...");
+
+        //                shallow.Destination.City =
+        //                    "Giza";
+
+        //                Console.WriteLine(
+        //                    "Original Shipment Address : "
+        //                    + shipment1.Destination.City);
+
+        //                Console.WriteLine(
+        //                    "Copied Shipment Address : "
+        //                    + shallow.Destination.City);
+
+        //                Console.WriteLine(
+        //                    "Same DeliveryAddress Object : "
+        //                    + Object.ReferenceEquals(
+        //                        shipment1.Destination,
+        //                        shallow.Destination));
+
+        //                Console.WriteLine();
+
+        //                // ==========================================
+        //                // Deep Copy
+        //                // ==========================================
+
+        //                Console.WriteLine(
+        //                    "------------------------------------------");
+
+        //                Console.WriteLine(
+        //                    "Deep Copy");
+
+        //                Console.WriteLine(
+        //                    "------------------------------------------");
+
+        //                // Restore original address
+        //                shipment1.Destination.City =
+        //                    "Cairo";
+
+        //                Shipment deep =
+        //                    shipment1.DeepCopy();
+
+        //                Console.WriteLine(
+        //                    "Original Shipment Address : "
+        //                    + shipment1.Destination.City);
+
+        //                Console.WriteLine(
+        //                    "Copied Shipment Address : "
+        //                    + deep.Destination.City);
+
+        //                Console.WriteLine(
+        //                    "Changing copied shipment address...");
+
+        //                deep.Destination.City =
+        //                    "Giza";
+
+        //                Console.WriteLine(
+        //                    "Original Shipment Address : "
+        //                    + shipment1.Destination.City);
+
+        //                Console.WriteLine(
+        //                    "Copied Shipment Address : "
+        //                    + deep.Destination.City);
+
+        //                Console.WriteLine(
+        //                    "Same DeliveryAddress Object : "
+        //                    + Object.ReferenceEquals(
+        //                        shipment1.Destination,
+        //                        deep.Destination));
+
+        //                Console.WriteLine();
+
+        //                // ==========================================
+        //                // Extension Methods
+        //                // ==========================================
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    "Extension Methods");
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    standard.GetSummary());
+
+        //                Console.WriteLine(
+        //                    express.GetSummary());
+
+        //                Console.WriteLine(
+        //                    international.GetSummary());
+
+        //                Console.WriteLine();
+
+        //                Console.WriteLine(
+        //                    "SH001 Is Delivered : "
+        //                    + standard.IsDelivered());
+
+        //                Console.WriteLine(
+        //                    "SH003 Is Delivered : "
+        //                    + international.IsDelivered());
+
+        //                Console.WriteLine();
+
+        //                // ==========================================
+        //                // Tracking Status
+        //                // ==========================================
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    "Tracking Status");
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                express.UpdateTrackingStatus(
+        //                    "Out For Delivery");
+
+        //                Console.WriteLine();
+
+        //                // ==========================================
+        //                // Static Utilities
+        //                // ==========================================
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    "Static Utilities");
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    "Total Shipments Created : "
+        //                    + Shipment.GetTotalShipmentsCreated());
+
+        //                Console.WriteLine();
+
+        //                // ==========================================
+        //                // Partial Method
+        //                // ==========================================
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    "Partial Method");
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                international.UpdateTrackingStatus(
+        //                    "Delivered");
+
+        //                Console.WriteLine();
+
+        //                // ==========================================
+        //                // Assignment Completed
+        //                // ==========================================
+
+        //                DeliveryUtilities.PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    "Assignment Completed");
+
+        //                DeliveryUtilities.PrintSeparator();
+        //            }
+        //        }
+
+            #endregion
 
 
 
