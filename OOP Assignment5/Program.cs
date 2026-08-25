@@ -628,21 +628,122 @@
 
             #region Interfaces
 
-        //public interface ITrackable
-        //        {
-        //            string GetTrackingStatus();
-        //        }
+            //public interface ITrackable
+            //        {
+            //            string GetTrackingStatus();
+            //        }
 
-        //        public interface IInsurable
-        //        {
-        //            decimal CalculateInsurance();
-        //        }
+            //        public interface IInsurable
+            //        {
+            //            decimal CalculateInsurance();
+            //        }
 
             #endregion
 
 
 
+            #region DeliveryCenter
 
+        //public class DeliveryCenter
+        //        {
+        //            private Shipment[] shipments =
+        //                new Shipment[10];
+
+        //            public bool AddShipment(
+        //                Shipment shipment)
+        //            {
+        //                for (int i = 0;
+        //                     i < shipments.Length;
+        //                     i++)
+        //                {
+        //                    if (shipments[i] == null)
+        //                    {
+        //                        shipments[i] = shipment;
+
+        //                        return true;
+        //                    }
+        //                }
+
+        //                return false;
+        //            }
+
+        //            public Shipment this[int index]
+        //            {
+        //                get
+        //                {
+        //                    if (index >= 0 &&
+        //                        index < shipments.Length)
+        //                    {
+        //                        return shipments[index];
+        //                    }
+
+        //                    return null;
+        //                }
+
+        //                set
+        //                {
+        //                    if (index >= 0 &&
+        //                        index < shipments.Length)
+        //                    {
+        //                        shipments[index] = value;
+        //                    }
+        //                }
+        //            }
+
+        //            public Shipment this[string trackingCode]
+        //            {
+        //                get
+        //                {
+        //                    foreach (Shipment shipment
+        //                             in shipments)
+        //                    {
+        //                        if (shipment != null &&
+        //                            shipment.TrackingCode ==
+        //                            trackingCode)
+        //                        {
+        //                            return shipment;
+        //                        }
+        //                    }
+
+        //                    return null;
+        //                }
+        //            }
+
+        //            public void PrintAllShipments()
+        //            {
+        //                foreach (Shipment shipment
+        //                         in shipments)
+        //                {
+        //                    if (shipment != null)
+        //                    {
+        //                        shipment.PrintShipment();
+
+        //                        Console.WriteLine();
+        //                    }
+        //                }
+        //            }
+
+        //            public void PrintTrackingStatuses()
+        //            {
+        //                foreach (Shipment shipment
+        //                         in shipments)
+        //                {
+        //                    if (shipment != null)
+        //                    {
+        //                        ITrackable trackable =
+        //                            shipment as ITrackable;
+
+        //                        if (trackable != null)
+        //                        {
+        //                            Console.WriteLine(
+        //                                trackable.GetTrackingStatus());
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+
+            #endregion
 
 
 
