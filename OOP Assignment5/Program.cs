@@ -644,110 +644,132 @@
 
             #region DeliveryCenter
 
-        //public class DeliveryCenter
-        //        {
-        //            private Shipment[] shipments =
-        //                new Shipment[10];
+            //public class DeliveryCenter
+            //        {
+            //            private Shipment[] shipments =
+            //                new Shipment[10];
 
-        //            public bool AddShipment(
-        //                Shipment shipment)
-        //            {
-        //                for (int i = 0;
-        //                     i < shipments.Length;
-        //                     i++)
-        //                {
-        //                    if (shipments[i] == null)
-        //                    {
-        //                        shipments[i] = shipment;
+            //            public bool AddShipment(
+            //                Shipment shipment)
+            //            {
+            //                for (int i = 0;
+            //                     i < shipments.Length;
+            //                     i++)
+            //                {
+            //                    if (shipments[i] == null)
+            //                    {
+            //                        shipments[i] = shipment;
 
-        //                        return true;
-        //                    }
-        //                }
+            //                        return true;
+            //                    }
+            //                }
 
-        //                return false;
-        //            }
+            //                return false;
+            //            }
 
-        //            public Shipment this[int index]
-        //            {
-        //                get
-        //                {
-        //                    if (index >= 0 &&
-        //                        index < shipments.Length)
-        //                    {
-        //                        return shipments[index];
-        //                    }
+            //            public Shipment this[int index]
+            //            {
+            //                get
+            //                {
+            //                    if (index >= 0 &&
+            //                        index < shipments.Length)
+            //                    {
+            //                        return shipments[index];
+            //                    }
 
-        //                    return null;
-        //                }
+            //                    return null;
+            //                }
 
-        //                set
-        //                {
-        //                    if (index >= 0 &&
-        //                        index < shipments.Length)
-        //                    {
-        //                        shipments[index] = value;
-        //                    }
-        //                }
-        //            }
+            //                set
+            //                {
+            //                    if (index >= 0 &&
+            //                        index < shipments.Length)
+            //                    {
+            //                        shipments[index] = value;
+            //                    }
+            //                }
+            //            }
 
-        //            public Shipment this[string trackingCode]
-        //            {
-        //                get
-        //                {
-        //                    foreach (Shipment shipment
-        //                             in shipments)
-        //                    {
-        //                        if (shipment != null &&
-        //                            shipment.TrackingCode ==
-        //                            trackingCode)
-        //                        {
-        //                            return shipment;
-        //                        }
-        //                    }
+            //            public Shipment this[string trackingCode]
+            //            {
+            //                get
+            //                {
+            //                    foreach (Shipment shipment
+            //                             in shipments)
+            //                    {
+            //                        if (shipment != null &&
+            //                            shipment.TrackingCode ==
+            //                            trackingCode)
+            //                        {
+            //                            return shipment;
+            //                        }
+            //                    }
 
-        //                    return null;
-        //                }
-        //            }
+            //                    return null;
+            //                }
+            //            }
 
-        //            public void PrintAllShipments()
-        //            {
-        //                foreach (Shipment shipment
-        //                         in shipments)
-        //                {
-        //                    if (shipment != null)
-        //                    {
-        //                        shipment.PrintShipment();
+            //            public void PrintAllShipments()
+            //            {
+            //                foreach (Shipment shipment
+            //                         in shipments)
+            //                {
+            //                    if (shipment != null)
+            //                    {
+            //                        shipment.PrintShipment();
 
-        //                        Console.WriteLine();
-        //                    }
-        //                }
-        //            }
+            //                        Console.WriteLine();
+            //                    }
+            //                }
+            //            }
 
-        //            public void PrintTrackingStatuses()
-        //            {
-        //                foreach (Shipment shipment
-        //                         in shipments)
-        //                {
-        //                    if (shipment != null)
-        //                    {
-        //                        ITrackable trackable =
-        //                            shipment as ITrackable;
+            //            public void PrintTrackingStatuses()
+            //            {
+            //                foreach (Shipment shipment
+            //                         in shipments)
+            //                {
+            //                    if (shipment != null)
+            //                    {
+            //                        ITrackable trackable =
+            //                            shipment as ITrackable;
 
-        //                        if (trackable != null)
-        //                        {
-        //                            Console.WriteLine(
-        //                                trackable.GetTrackingStatus());
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
+            //                        if (trackable != null)
+            //                        {
+            //                            Console.WriteLine(
+            //                                trackable.GetTrackingStatus());
+            //                        }
+            //                    }
+            //                }
+            //            }
+            //        }
 
             #endregion
 
 
 
 
+            #region DeliveryUtilities
+
+        //public static class DeliveryUtilities
+        //        {
+        //            public static void PrintSeparator()
+        //            {
+        //                Console.WriteLine(
+        //                    "==========================================");
+        //            }
+
+        //            public static void PrintSystemTitle()
+        //            {
+        //                PrintSeparator();
+
+        //                Console.WriteLine(
+        //                    "Smart Delivery Management System");
+
+        //                PrintSeparator();
+        //            }
+        //        }
+
+            #endregion
 
 
 
