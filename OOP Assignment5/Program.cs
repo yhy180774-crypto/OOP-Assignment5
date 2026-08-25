@@ -750,30 +750,89 @@
 
             #region DeliveryUtilities
 
-        //public static class DeliveryUtilities
-        //        {
-        //            public static void PrintSeparator()
-        //            {
-        //                Console.WriteLine(
-        //                    "==========================================");
-        //            }
+            //public static class DeliveryUtilities
+            //        {
+            //            public static void PrintSeparator()
+            //            {
+            //                Console.WriteLine(
+            //                    "==========================================");
+            //            }
 
-        //            public static void PrintSystemTitle()
-        //            {
-        //                PrintSeparator();
+            //            public static void PrintSystemTitle()
+            //            {
+            //                PrintSeparator();
 
-        //                Console.WriteLine(
-        //                    "Smart Delivery Management System");
+            //                Console.WriteLine(
+            //                    "Smart Delivery Management System");
 
-        //                PrintSeparator();
-        //            }
-        //        }
+            //                PrintSeparator();
+            //            }
+            //        }
 
             #endregion
 
 
 
+            #region ShipmentExtensions
 
+        //public static class ShipmentExtensions
+        //        {
+        //            public static string GetSummary(
+        //                this Shipment shipment)
+        //            {
+        //                string type =
+        //                    shipment.GetType().Name;
+
+        //                type =
+        //                    type.Replace(
+        //                        "Shipment",
+        //                        "");
+
+        //                return shipment.TrackingCode
+        //                       + " | "
+        //                       + type
+        //                       + " | "
+        //                       + shipment.Weight
+        //                       + " KG | "
+        //                       + GetStatus(shipment);
+        //            }
+
+        //            public static bool IsDelivered(
+        //                this Shipment shipment)
+        //            {
+        //                return GetStatus(shipment)
+        //                    == "Delivered";
+        //            }
+
+        //            private static string GetStatus(
+        //                Shipment shipment)
+        //            {
+        //                ITrackable trackable =
+        //                    shipment as ITrackable;
+
+        //                if (trackable == null)
+        //                    return "Unknown";
+
+        //                string status =
+        //                    trackable.GetTrackingStatus();
+
+        //                if (status.Contains(
+        //                    "has been Delivered"))
+        //                {
+        //                    return "Delivered";
+        //                }
+
+        //                if (status.Contains(
+        //                    "Out For Delivery"))
+        //                {
+        //                    return "Out For Delivery";
+        //                }
+
+        //                return "In Transit";
+        //            }
+        //        }
+
+            #endregion
 
 
 
