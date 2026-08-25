@@ -158,168 +158,203 @@
 
             #region Shipment
 
-                //public abstract partial class Shipment
-                //        {
-                //            private string trackingCode;
-                //            private string description;
-                //            private decimal weight;
-                //            private decimal deliveryFee;
+            //public abstract partial class Shipment
+            //        {
+            //            private string trackingCode;
+            //            private string description;
+            //            private decimal weight;
+            //            private decimal deliveryFee;
 
-                //            public static int TotalShipmentsCreated;
+            //            public static int TotalShipmentsCreated;
 
-                //            public string TrackingCode
-                //            {
-                //                get
-                //                {
-                //                    return trackingCode;
-                //                }
-                //            }
+            //            public string TrackingCode
+            //            {
+            //                get
+            //                {
+            //                    return trackingCode;
+            //                }
+            //            }
 
-                //            public string Description
-                //            {
-                //                get
-                //                {
-                //                    return description;
-                //                }
+            //            public string Description
+            //            {
+            //                get
+            //                {
+            //                    return description;
+            //                }
 
-                //                set
-                //                {
-                //                    if (!string.IsNullOrWhiteSpace(value))
-                //                        description = value;
-                //                }
-                //            }
+            //                set
+            //                {
+            //                    if (!string.IsNullOrWhiteSpace(value))
+            //                        description = value;
+            //                }
+            //            }
 
-                //            public decimal Weight
-                //            {
-                //                get
-                //                {
-                //                    return weight;
-                //                }
+            //            public decimal Weight
+            //            {
+            //                get
+            //                {
+            //                    return weight;
+            //                }
 
-                //                set
-                //                {
-                //                    if (value > 0)
-                //                        weight = value;
-                //                }
-                //            }
+            //                set
+            //                {
+            //                    if (value > 0)
+            //                        weight = value;
+            //                }
+            //            }
 
-                //            public decimal DeliveryFee
-                //            {
-                //                get
-                //                {
-                //                    return deliveryFee;
-                //                }
+            //            public decimal DeliveryFee
+            //            {
+            //                get
+            //                {
+            //                    return deliveryFee;
+            //                }
 
-                //                private set
-                //                {
-                //                    if (value > 0)
-                //                        deliveryFee = value;
-                //                }
-                //            }
+            //                private set
+            //                {
+            //                    if (value > 0)
+            //                        deliveryFee = value;
+            //                }
+            //            }
 
-                //            public DeliveryAddress Destination
-                //            {
-                //                get;
-                //                set;
-                //            }
+            //            public DeliveryAddress Destination
+            //            {
+            //                get;
+            //                set;
+            //            }
 
-                //            public abstract decimal EstimatedCost
-                //            {
-                //                get;
-                //            }
+            //            public abstract decimal EstimatedCost
+            //            {
+            //                get;
+            //            }
 
-                //            static Shipment()
-                //            {
-                //                TotalShipmentsCreated = 0;
+            //            static Shipment()
+            //            {
+            //                TotalShipmentsCreated = 0;
 
-                //                Console.WriteLine(
-                //                    "Shipment System Initialized");
-                //            }
+            //                Console.WriteLine(
+            //                    "Shipment System Initialized");
+            //            }
 
-                //            protected Shipment(
-                //                string trackingCode,
-                //                string description,
-                //                decimal weight,
-                //                decimal deliveryFee,
-                //                DeliveryAddress destination)
-                //            {
-                //                this.trackingCode =
-                //                    string.IsNullOrWhiteSpace(trackingCode)
-                //                    ? "Unknown"
-                //                    : trackingCode;
+            //            protected Shipment(
+            //                string trackingCode,
+            //                string description,
+            //                decimal weight,
+            //                decimal deliveryFee,
+            //                DeliveryAddress destination)
+            //            {
+            //                this.trackingCode =
+            //                    string.IsNullOrWhiteSpace(trackingCode)
+            //                    ? "Unknown"
+            //                    : trackingCode;
 
-                //                this.description = "Unknown";
-                //                this.weight = 1;
-                //                this.deliveryFee = 50;
+            //                this.description = "Unknown";
+            //                this.weight = 1;
+            //                this.deliveryFee = 50;
 
-                //                Description = description;
-                //                Weight = weight;
-                //                DeliveryFee = deliveryFee;
+            //                Description = description;
+            //                Weight = weight;
+            //                DeliveryFee = deliveryFee;
 
-                //                Destination = destination;
+            //                Destination = destination;
 
-                //                TotalShipmentsCreated++;
-                //            }
+            //                TotalShipmentsCreated++;
+            //            }
 
-                //            public abstract void PrintShipment();
+            //            public abstract void PrintShipment();
 
-                //            public static int GetTotalShipmentsCreated()
-                //            {
-                //                return TotalShipmentsCreated;
-                //            }
+            //            public static int GetTotalShipmentsCreated()
+            //            {
+            //                return TotalShipmentsCreated;
+            //            }
 
-                //            public Shipment CopyShipment()
-                //            {
-                //                return (Shipment)this.MemberwiseClone();
-                //            }
+            //            public Shipment CopyShipment()
+            //            {
+            //                return (Shipment)this.MemberwiseClone();
+            //            }
 
-                //            public Shipment ShallowCopy()
-                //            {
-                //                return (Shipment)this.MemberwiseClone();
-                //            }
+            //            public Shipment ShallowCopy()
+            //            {
+            //                return (Shipment)this.MemberwiseClone();
+            //            }
 
-                //            public Shipment DeepCopy()
-                //            {
-                //                Shipment copy =
-                //                    (Shipment)this.MemberwiseClone();
+            //            public Shipment DeepCopy()
+            //            {
+            //                Shipment copy =
+            //                    (Shipment)this.MemberwiseClone();
 
-                //                if (Destination != null)
-                //                {
-                //                    copy.Destination =
-                //                        new DeliveryAddress(
-                //                            Destination.City,
-                //                            Destination.Street,
-                //                            Destination.BuildingNumber);
-                //                }
+            //                if (Destination != null)
+            //                {
+            //                    copy.Destination =
+            //                        new DeliveryAddress(
+            //                            Destination.City,
+            //                            Destination.Street,
+            //                            Destination.BuildingNumber);
+            //                }
 
-                //                return copy;
-                //            }
+            //                return copy;
+            //            }
 
-                //            public void UpdateWeight(decimal newWeight)
-                //            {
-                //                if (newWeight > 0)
-                //                    Weight = newWeight;
-                //            }
+            //            public void UpdateWeight(decimal newWeight)
+            //            {
+            //                if (newWeight > 0)
+            //                    Weight = newWeight;
+            //            }
 
-                //            public void UpdateWeight(
-                //                decimal newWeight,
-                //                decimal extraPackingWeight)
-                //            {
-                //                if (newWeight > 0 &&
-                //                    extraPackingWeight >= 0)
-                //                {
-                //                    Weight =
-                //                        newWeight +
-                //                        extraPackingWeight;
-                //                }
-                //            }
-                //        }
+            //            public void UpdateWeight(
+            //                decimal newWeight,
+            //                decimal extraPackingWeight)
+            //            {
+            //                if (newWeight > 0 &&
+            //                    extraPackingWeight >= 0)
+            //                {
+            //                    Weight =
+            //                        newWeight +
+            //                        extraPackingWeight;
+            //                }
+            //            }
+            //        }
 
             #endregion
 
 
 
+            #region Shipment Tracking
 
+            //public abstract partial class Shipment
+            //        {
+            //            private string trackingStatus = "In Transit";
+
+            //            public string GetTrackingStatus()
+            //            {
+            //                return trackingStatus;
+            //            }
+
+            //            public void UpdateTrackingStatus(
+            //                string newStatus)
+            //            {
+            //                if (!string.IsNullOrWhiteSpace(newStatus))
+            //                {
+            //                    trackingStatus = newStatus;
+
+            //                    OnTrackingStatusChanged(
+            //                        newStatus);
+            //                }
+            //            }
+
+            //            partial void OnTrackingStatusChanged(
+            //                string newStatus);
+
+            //            partial void OnTrackingStatusChanged(
+            //                string newStatus)
+            //            {
+            //                Console.WriteLine(
+            //                    "Tracking status changed to: "
+            //                    + newStatus);
+            //            }
+            //        }
+
+            #endregion
 
 
 
